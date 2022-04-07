@@ -16,7 +16,7 @@ const Item = new mongoose.Schema(
     },
     sender: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "restaurants",
+      ref: "user",
     },
     status: {
       type: String,
