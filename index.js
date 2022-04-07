@@ -4,6 +4,7 @@ const cors = require("cors");
 const itemRoutes = require("./routes/items");
 const restFoodRoutes = require("./routes/restaurantfood");
 const userRoutes = require("./routes/user");
+const port = process.env.PORT || 8080
 
 const mongoose = require("mongoose");
 
@@ -23,7 +24,7 @@ mongoose
   )
   .then(() => {
     console.log("DB Connected");
-    app.listen(5000, () => {
+    app.listen(port, () => {
       console.log("Server running on port 5000");
     });
   })
